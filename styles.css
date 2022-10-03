@@ -100,10 +100,6 @@ body, html {
     margin-left: 20px;
 }
 
-.header .bell-profile button {
-    border-style: none;
-    background: none;
-}
 
 .header .bell-profile img {
     height: 50px;
@@ -163,9 +159,7 @@ a {
     gap: 30px;
 }
 
-.content .right-panel {
-    grid-column: 2 / 3;
-}
+
 
 .cards {
     display: grid;
@@ -178,7 +172,7 @@ a {
     background-color: white;
     height: 250px;
     width: 1fr;
-    border-radius: 20px;
+    border-radius: 10px;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -199,4 +193,75 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding-right: 10px;
+    gap: 10px;
 }
+
+button {
+    border-style: none;
+    background: none;
+}
+
+
+.content .right-panel {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: .1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.announcements {
+    grid-row: 2 / 3;
+}
+
+.announcements .grid-container{
+    background-color: white;
+    height: 1fr;
+    width: 1fr;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcements .a-text {
+    border-top: black 1px solid;
+    padding-bottom: 20px;
+}
+
+.announcements .grid-container :first-child {
+    border-top: 0px;
+}
+
+.trending {
+    grid-row: 3 / 4;
+}
+
+.trending-container{
+    background-color: white;
+    height: 300px;
+    width: 1fr;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+
+.trending .trending-user {
+    margin: 10px;
+}
+
+.trending img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0px 20px 0px 20px
+}
+
+.trending-container>.flex-container{
+    display: flex;
+}
+
+
