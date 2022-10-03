@@ -156,4 +156,19 @@ a {
     background-color: rgb(219, 219, 219);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr .5fr;
+    padding-left: 20px;
+}
+
+.card {
+    background-color: white;
+    height: 250px;
+    width: 350px;
+    border-radius: 20px;
+}
+
+.content .right-panel {
+    grid-column: 3 / 4;
 }
