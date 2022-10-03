@@ -7,12 +7,15 @@ body, html {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
 }
 
+
+
+/* HEADER */
 .header {
-    background-color: tan;
+    background-color: white;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
@@ -20,15 +23,137 @@ body, html {
     grid-template-rows: 1fr 1fr;
 }
 
+.header .search-box {
+    display: grid;
+    grid-template-columns: 1.5fr .5fr 7fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.header .search-box button {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-style: none;
+    background: none;
+}
+
+.header .search-box input{
+    background-color: rgb(230, 230, 230);
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.header .welcome {
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    grid-template-rows: .1fr 1fr .1fr;
+}
+
+.header .welcome .flex-container {
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.header .welcome img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin: 0px 20px 0px 20px
+}
+
+.header .welcome .greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .welcome .name,p {
+    margin: 0px ;
+}
+
+.header .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    gap: 30px;
+}
+
+.header .actions button {
+    background-color: rgb(63, 151, 180);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.header .bell-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 80px;
+    gap: 25px;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 20px;
+}
+
+.header .bell-profile button {
+    border-style: none;
+    background: none;
+}
+
+.header .bell-profile img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+/* SIDEBAR */
 .sidebar {
-    background-color: lightblue;
+    background-color: rgb(63, 151, 180);
+    color: white;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 10fr 5fr 5fr;
+    row-gap: 35px;
+    padding: 10px;
 }
 
+.sidebar h1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.sidebar .menu-top {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size:x-large;
+}
+
+.sidebar .menu-bottom {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    font-size:x-large;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* CONTENT */
 .content {
-    background-color: lightgray;
+    background-color: rgb(219, 219, 219);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
