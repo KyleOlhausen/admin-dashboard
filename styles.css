@@ -168,7 +168,6 @@ a {
 }
 
 .cards {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -182,11 +181,14 @@ a {
     border-radius: 20px;
     list-style: none;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
+    background-image: -webkit-linear-gradient(left, orange, orange 2%, transparent 2%, transparent 100%);
 }
 
 .card p {
     padding: 10px;
+    padding-left: 20px;
 }
 
 .card .card-title {
@@ -195,4 +197,6 @@ a {
 
 .card .btns {
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
