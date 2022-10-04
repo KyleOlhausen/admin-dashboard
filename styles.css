@@ -23,20 +23,24 @@ body, html {
     grid-template-rows: 1fr 1fr;
 }
 
-.header .search-box {
+/* search bar*/
+.search-box {
     display: grid;
     grid-template-columns: 1.5fr .5fr 7fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.header .search-box button {
+.search-box button {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+button {
     border-style: none;
     background: none;
 }
 
-.header .search-box input{
+.search-box input{
     background-color: rgb(230, 230, 230);
     grid-column: 3 / 4;
     grid-row: 2 / 3;
@@ -44,35 +48,37 @@ body, html {
     border-style: none;
 }
 
-.header .welcome {
+/* profile welcome */
+.welcome {
     display: grid;
     grid-template-columns: .5fr 2fr .5fr;
     grid-template-rows: .1fr 1fr .1fr;
 }
 
-.header .welcome .flex-container {
+.welcome .flex-container {
     display: flex;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
-.header .welcome img {
+.welcome img {
     height: 90px;
     width: 90px;
     border-radius: 50%;
     margin: 0px 20px 0px 20px
 }
 
-.header .welcome .greeting{
+.welcome .greeting{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.header .welcome .name,p {
+.welcome .name, p {
     margin: 0px ;
 }
 
+/* header buttons */
 .header .actions {
     display: flex;
     justify-content: flex-end;
@@ -81,15 +87,15 @@ body, html {
     gap: 30px;
 }
 
-.header .actions button {
+.actions button {
     background-color: rgb(63, 151, 180);
     color: white;
     padding: 10px 20px 10px 20px;
     border-radius: 20px;
-    border-style: none;
+    cursor: pointer;
 }
 
-.header .bell-profile {
+.bell-profile {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -100,12 +106,13 @@ body, html {
     margin-left: 20px;
 }
 
-
-.header .bell-profile img {
+.bell-profile img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
+/* HEADER END */
+
 
 
 /* SIDEBAR */
@@ -141,10 +148,17 @@ body, html {
     font-size:x-large;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+.menu-bottom :hover{
+    -webkit-transform: scale(1.07);
+    text-decoration: underline;
 }
+
+.menu-top :hover{
+    -webkit-transform: scale(1.07);
+    text-decoration: underline;
+}
+/* SIDEBAR END */
+
 
 
 /* CONTENT */
@@ -159,8 +173,7 @@ a {
     gap: 30px;
 }
 
-
-
+/* project cards */
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,12 +210,7 @@ a {
     gap: 10px;
 }
 
-button {
-    border-style: none;
-    background: none;
-}
-
-
+/* announcements and trending */
 .content .right-panel {
     grid-column: 2 / 3;
     display: grid;
@@ -263,5 +271,20 @@ button {
 .trending-container>.flex-container{
     display: flex;
 }
+/* CONTENT END */
 
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    border-style: none;
+    background: none;
+}
+
+button :hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.10);
+}
